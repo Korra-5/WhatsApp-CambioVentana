@@ -1,0 +1,21 @@
+<resources>
+    <string name="Inicio">WhatsApp</string>
+    <string name="persona1">Alejandra</string>
+    <string name="persona2">Bruno</string>
+    <string name="persona3">Claudia</string>
+    <string name="persona4">Diego</string>
+    <string name="persona5">Elena</string>
+    <string name="persona6">Francisco</string>
+    <string name="persona7">Gloria</string>
+    <string name="persona8">Héctor</string>
+    <string name="persona9">Irene</string>
+    <string name="persona10">Jorge</string>
+    <string name="persona11">Karen</string>
+    <string name="persona12">Lucía</string>
+    <string name="persona13">Martín</string>
+    <string name="persona14">Natalia</string>
+
+    <string name="app_name">WhtasApp2\n</string>
+
+
+</resources>
