@@ -8,6 +8,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.filled.Done
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
@@ -18,6 +19,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.layout.VerticalAlignmentLine
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
@@ -30,7 +32,9 @@ import com.example.jetpackcompose.R
 
 
 @Composable
-fun AppChat(navControlador: NavController) {
+fun AppChat(
+    navControlador: NavController, name:String
+) {
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -56,8 +60,8 @@ fun AppChat(navControlador: NavController) {
                     modifier = Modifier
                         .width(20.dp)
                         .weight(0.5f)
-                        .clickable { navControlador.navigate(route = AppScreen.InicioScreen.route) }
-                    ,tint = Color.White
+                    .clickable { navControlador.navigate(route = AppScreen.InicioScreen.route) }
+                    , tint = Color.White
                 )
                 Image(
                     painter = painterResource(id = R.drawable.wassap2),
@@ -70,7 +74,7 @@ fun AppChat(navControlador: NavController) {
                 )
                 Column(modifier = Modifier.weight(5f)) {
                     Text(
-                        text = "AAAA",
+                        text = name,
                         modifier = Modifier
                             .background(colorResource(id = R.color.DarkGreen))
                             .clickable { },
@@ -87,6 +91,8 @@ fun AppChat(navControlador: NavController) {
                         style = TextStyle(fontSize = 9.sp)
                     )
                 }
+
+
             }
             msg()
             msg()
@@ -94,10 +100,23 @@ fun AppChat(navControlador: NavController) {
 
         }
 
-
-
+        Box(
+            modifier = Modifier
+                . width(400.dp)
+                .height(60.dp)
+                .clip(CircleShape)
+                .background(Color.LightGray)
+                .align(Alignment.BottomStart)
+                .padding(end = 10.dp),
+            contentAlignment = Alignment.CenterEnd)
+            {
+            Icon(
+                imageVector = Icons.Filled.Done,
+                contentDescription = "",)
+        }
     }
 }
+
 
 @Composable
 fun msg(){

@@ -31,7 +31,7 @@ fun Persona(navController: NavController, imagen: Int, nombre: String):String {
             .background(Color.White)
             .fillMaxWidth()
             .height(50.dp)
-            .clickable { navController.navigate(route = AppScreen.ChatScreen.route) },
+            .clickable { navController.navigate(route = AppScreen.ChatScreen.route+ "/$nombre") },
         verticalAlignment = Alignment.CenterVertically
     ) {
         Image(
